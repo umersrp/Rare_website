@@ -1,0 +1,715 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap'); */
+
+/* index */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300&display=swap'); */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap'); */
+@font-face {
+  font-family: myFirstFont;
+  src: url(../src/asset/Font-famaily/Hero\ New\ Light.woff);
+}
+/* styles.css or styles.scss */
+
+@keyframes flip {
+  0% {
+    transform: perspective(400px) rotateY(0);
+  }
+  50% {
+    transform: perspective(400px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+.hover\:flip:hover {
+  animation: flip 0.7s linear;
+}
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.show {
+  max-height: 1000px; /* Set a value higher than the expected maximum height of your content */
+}
+
+
+*{
+  font-family: 'myFirstFont';
+}
+
+.body {
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.animated-hero {
+  animation: fadeIn 1s ease-in-out;
+  /* Use the animation */
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(12, 11, 11);
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* .navbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #1d1111;
+  padding: 50px;
+  font-family: 'Source Sans 3', sans-serif;
+  position: relative;
+  justify-content: space-between;
+  z-index: 3;
+
+} */
+
+line {
+  background: linear-gradient(90deg, #242527 -2.22%, #897A54 67.22%);
+}
+
+
+
+
+/* .navbar-links a {
+  text-decoration: none;
+  color: #030303;
+  gap: 20px;
+} */
+
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* home */
+.home-container {
+  justify-content: center;
+
+
+}
+.dropdown-menu[data-bs-popper]{
+  top: 100%;
+  left: -100px;
+}
+.hero-section {
+  background-image: url('./asset/new-img.jpg');
+  /* Set your background image here */
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  padding-right: 30px;
+  border-bottom-left-radius: 70px;
+  height: 550px;
+  /* font-family: drk, frmlr, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+
+}
+
+.hero-content {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  /* font-family: drk, frmlr, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+
+}
+
+.btn-all {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 300;
+  margin-left: 13%;
+  margin-top: 44px;
+  background-color: white;
+  font-size: 2rem;
+  /* font-family: drk, frmlr, 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; */
+
+}
+
+.btn-1 {
+  border-radius: 10px;
+  font-weight: 300;
+  background-color: white;
+  font-size: 16px;
+  color: #030303;
+  display: flex;
+  width: 144px;
+  height: 57px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.panel-section {
+  background-image: url(./asset/Group\ 1618.png);
+  background-size: 100% auto;
+  /* Cover the width while maintaining aspect ratio */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  width: 100%;
+  /* Set the width to 100% */
+  height: 100%;
+  padding: 30px;
+}
+
+.backyard-container {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  /* Set the height to match your image height */
+
+  /* Add the shaded background to the container */
+  &::before {
+    content: '';
+    /* Specify an empty content property */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust the color and opacity as needed */
+    z-index: -1;
+    /* Place the background behind the image */
+  }
+}
+
+.backyard {
+  position: relative;
+  z-index: 1;
+  /* Place the image above the shaded background */
+}
+
+/* Your existing background image styles go here */
+.backyard {
+  background-image: url(../src/asset/appolo.png);
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 27px;
+  height: 100%;
+}
+
+.button-x {
+  background: #95895d;
+}
+.button-x:hover{
+  background-color: #897A54;
+}
+.nav-tabs{
+  border-bottom: 2px solid;
+  border-color: #897A54;
+}
+.nav-action{
+  
+color: #000;
+}
+.nav-action:hover{
+  color: white;
+  background-color: #897A54;
+}
+.nav-link .nav-tabs{
+ border: none;
+}
+
+
+.second-container {
+  background-color: rgba(149, 137, 93, 0.9);
+  /* This is equivalent to #95895d with 90% opacity */
+  background-image: url(../src/asset/Mask\ Group.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 27px;
+  position: relative;
+}
+.filters{
+  background-image: url(../src/asset/strip.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 27px;
+  position: relative;
+
+}
+.modal{
+  position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background:wheat;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 30px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.slider-btn.left {
+  left: 0;
+}
+
+.slider-btn.right {
+  right: 0;
+}
+.close-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  color: #000000; /* Adjust color as needed */
+}
+.close-btn :hover{
+  background-color: red;
+}
+
+.left-2 {
+  left: 2px;
+}
+
+.second-container::after {
+
+  position: absolute;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 27px;
+  box-shadow: rgb(12, 11, 11);
+  /* Adjust shadow properties as needed */
+  z-index: 1;
+}
+
+.borderBottom {
+  border-bottom-width: 3px;
+  --tw-border-opacity: 1;
+  border-color: #95895d;
+  padding-bottom: 1.25rem;
+}
+
+.background {
+  background: #95895d;
+}
+
+.textt {
+  color: #95895d;
+  border-color: #95895d;
+ 
+}
+.color{
+  color: #95895d;
+  border-color: #95895d;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s
+}
+.color:hover{
+  background-color: #897A54;
+  color: aliceblue;
+}
+
+
+.textt::placeholder {
+  color: #95895d;
+}
+
+.border-color {
+  border-color: #95895d;
+  border-width: 2px;
+}
+
+.border-card {
+  border-color: #95895d;
+  border-width: 10px;
+}
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  font-size: 17px;
+  color: black;
+  text-align: left;
+  background-color: var(--bs-accordion-btn-bg);
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: var(--bs-accordion-transition);
+  gap: 10px;
+  font-weight: 600;
+  border-color: black;
+}
+
+.counter {
+  background-image: url(../src/asset/Rectangle\ 258.png);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+}
+
+/* RangeInput.css */
+.custom-range-input {
+  width: 80%;
+  /* Set the width of the range input */
+  background: #97a049;
+  /* Set the background color */
+  height: 5px;
+  /* Set the height of the range input track */
+  border: none;
+  /* Remove the default border */
+  outline: none;
+  /* Remove the default outline */
+  border-radius: 5px;
+  /* Add some rounded corners */
+  transition: 0.2s;
+  /* Add a smooth transition for color changes */
+}
+
+.custom-range-input::-webkit-slider-thumb {
+  background: #e74c3c;
+  /* Set the color of the range thumb (for webkit browsers) */
+  border: none;
+  /* Remove the default border */
+  width: 15px;
+  /* Set the width of the thumb */
+  height: 15px;
+  /* Set the height of the thumb */
+  border-radius: 50%;
+  /* Make the thumb a circle */
+  cursor: pointer;
+  /* Change the cursor to a pointer on hover */
+}
+
+.si-distance {
+  font-size: 13px;
+  display: flex;
+  font-weight: 500;
+  gap: 10px;
+  color: #000;
+}
+
+.owner-container {
+  background-image: url(../src/asset/Rectangle\ 241.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+
+}
+
+.container {
+  width: 100%;
+}
+
+.agent-container {
+  background-image: url(../src/asset/Rectangle\ 241\ \(1\).png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  position: relative;
+
+}
+
+.contact-container {
+  background-image: url(../src/asset/bgimg.jpeg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+
+}
+
+.about-container {
+  background-image: url(../src/asset/Rectangle\ 241\ \(3\).png);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+}
+
+.accordion {
+  /* background-color: white; */
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.panel.show {
+  display: block;
+}
+
+.about-background {
+  background: #000;
+  position: relative;
+  width: 100%;
+
+
+}
+
+.form {
+  width: 100%;
+}
+
+.input-fild {
+  width: 100%;
+  padding: 15px;
+}
+.small-img{
+  display: flex;
+ column-gap: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 700px;
+  }
+
+
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  
+
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1500px;
+  }
+
+  .input-fild {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 2022px;
+  }
+
+
+
+}
+
+
+@media (max-width: 768px) {
+  /* .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    /* Further reduced padding for mobile and tablet */
+  /* } */ */
+.small-img{
+  flex-direction: column;
+}
+  
+  .navbar-links li {
+    margin-right: 0;
+    /* Remove margin for mobile and tablet */
+  }
+
+  .home-container {
+    height: auto;
+    /* Remove fixed height for mobile and tablet */
+  }
+
+  .btn-all {
+    margin: 10px;
+    /* Reduce margin for mobile and tablet */
+  }
+
+  .panel-section {
+    background: #000;
+  }
+
+  .backyard {
+    background-size: cover;
+
+  }
+
+  .hero-section {
+    background-size: cover;
+    padding-right: 0px;
+  }
+
+  .counter {
+    display: none;
+    right: 30px;
+    top: 0%;
+    left: 10px;
+  }
+
+  .countar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-fild {
+    width: 100%;
+  }
+}
+
+@media (min-width: 780px) {
+
+ 
+
+  /* .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding:0 50px;
+    /* Further reduced padding for mobile and tablet */
+  /* } */ */
+ 
+
+  
+  .navbar-links li {
+    margin-right: 0;
+    /* Remove margin for mobile and tablet */
+  }
+
+  .home-container {
+    height: auto;
+    /* Remove fixed height for mobile and tablet */
+  }
+
+  .btn-all {
+    margin: 10px;
+    /* Reduce margin for mobile and tablet */
+  }
+
+  .panel-section {
+    background-size: cover;
+  }
+
+  .backyard {
+    background-size: cover;
+
+  }
+
+  .hero-section {
+    background-size: cover;
+  }
+
+}
+@media (min-width: 780px) {
+  .small-img{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
