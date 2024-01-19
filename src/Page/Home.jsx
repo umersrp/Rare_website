@@ -23,12 +23,9 @@ import Group399 from '../asset/Group 399.png'
 import Group724 from '../asset/Group 724.png'
 import Group725 from '../asset/Group 725.png'
 import Group726 from '../asset/Group 726.png'
-import Group723 from '../asset/Group 723.png'
-import rectangle8 from '../asset/Rectangle 8 (1).png'
 import Footer from '../Components/Footer';
 import searchh from '../asset/searchh.png'
 import pricetag from '../asset/price-tag.png'
-// import rare2 from '../asset/rare 2.png'
 import Group19 from '../asset/Group 19.png'
 import Group1597 from '../asset/Group 1597.png'
 import clock from '../asset/clock.png'
@@ -138,32 +135,32 @@ function Home() {
     // Clear the delay timer to prevent memory leaks
     return () => clearTimeout(delay);
   }, []);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('http://localhost:3600/home/get');
-        const result = await response.json();
-        if (result.status === true) {
-          setData(result.data);
-        }
-        //console.log('result',result)
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch('http://localhost:3600/home/get');
+  //       const result = await response.json();
+  //       if (result.status === true) {
+  //         setData(result.data);
+  //       }
+  //       //console.log('result',result)
+  //     } catch (error) {
+  //       setError(error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  // if (error) {
+  //   return <div>Error: {error.message}</div>;
+  // }
 
 
   return (
@@ -178,8 +175,8 @@ function Home() {
           <div className="hero-section">
             {/* <img src={{`http://localhost:3600${item.imageURL}`}} alt="" />{data && <h2>{item.heading */}
 
-            <div className='pl-[80px]'>
-              <Card style={{ width: '500px', height: '400px', borderBottomRightRadius: '80px', padding: '40px' }}>
+            <div className='lg:pl-[80px] p-[10px] lg:p-[0px] '>
+              <Card  className='h-[500px] w-[300px] p-[30px] lg:w-[500px] lg:h-[400px] lg:p-[40px] rounded-br-[80px]' >
                 <Card.Body>
                   <Card.Title style={{ fontSize: '3.25rem', textAlign: 'left', color: 'black' }}>Feel at home
                     free to roam
