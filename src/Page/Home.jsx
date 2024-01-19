@@ -178,8 +178,8 @@ function Home() {
           <div className="hero-section">
             {/* <img src={{`http://localhost:3600${item.imageURL}`}} alt="" />{data && <h2>{item.heading */}
 
-            <div className='pl-[80px]'>
-              <Card style={{ width: '500px', height: '400px', borderBottomRightRadius: '80px', padding: '40px' }}>
+            <div className='lg:pl-[80px] p-[10px] lg:p-[0px] '>
+              <Card  className='h-[500px] w-[300px] p-[30px] lg:w-[500px] lg:h-[400px] lg:p-[40px] rounded-br-[80px]  ' >
                 <Card.Body>
                   <Card.Title style={{ fontSize: '3.25rem', textAlign: 'left', color: 'black' }}>Feel at home
                     free to roam
